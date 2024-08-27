@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+</head>
+<body>
+    <h1>Formulario Html</h1>
+
+    <h2>Entradas simples</h2>
+    <form>
+        <ul>
+        <li>
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido"><br><br>
+        </li>
+        <li>
+        <label for="contrasena">Contraseña:</label><br>
+        <input type="password" id="contrasena" name="contrasena"><br><br>
+        </li>
+        <li>
+        <label for="oculto">Oculto:</label><br>
+        <input type="hidden" id="oculto" name="oculto" value="valorOculto"><br><br>
+        </li>
+        <li>
+        <label for="deshabilitado">Campo deshabilitado:</label><br>
+        <input type="text" id="deshabilitado" name="deshabilitado" value="valor deshabilitado" disabled><br><br>
+        </li>
+        <li>
+        <label for="sololectura">Campo de solo lectura:</label><br>
+        <input type="text" id="sololectura" name="sololectura" value="valorSoloLectura" readonly><br><br>
+        </li>
+        </ul>
+        <h2>Entradas de selección</h2>
+        <ul>
+        <li>
+        <input type="checkbox" id="deportes" name="deportes">
+        <label for="deportes">Practica deportes</label><br>
+        </li>
+        <li>
+        <input type="checkbox" id="musica" name="musica">
+        <label for="musica">Practica musical</label><br>
+        </li>
+        <li>
+        <input type="checkbox" id="pintura" name="pintura">
+        <label for="pintura">Practica de pintura artística</label><br><br>
+        </li>
+        <li>
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="masculino" name="sexo" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="sexo" value="femenino">
+        <label for="femenino">Femenino</label><br><br>
+        </li>
+        <li>
+        <label for="estudios">Estudios cursados:</label><br>
+        <select id="estudios" name="estudios">
+            <option value="primarios">Primarios</option>
+            <option value="secundarios">Secundarios</option>
+            <option value="terciarios">Terciarios</option>
+            <option value="universitarios">Universitarios</option>
+            <option value="postgrados">Postgrados</option>
+        </select><br><br>
+        </li>
+        <li>
+        <label for="fechayhora">Fecha y Hora:</label><br>
+        <input type="datetime-local" id="fechayhora" name="fechayhora"><br><br>
+        </li>
+        <li>
+        <label for="color">Color:</label><br>
+        <input type="color" id="color" name="color" value="#000000"><br><br>
+        </li>
+        </ul>
+        <h2>Entradas con validación</h2>
+        <ul>
+        <li>
+        <label for="comentario">Comentario (validación por requerido):</label><br>
+        <input type="text" id="comentario" name="comentario" required><br><br>
+        </li>
+        <li>
+        <label for="email">Email con doble validación (x@x y required):</label><br>
+        <input type="email" id="email" name="email" placeholder="texto@texto" required><br><br>
+        </li>
+        <li>
+        <label for="numero">Número entero limitado (validación por tipo numérico y cotas):</label><br>
+        <input type="number" id="numero" name="numero" min="1" max="10"><br><br>
+        </li>
+        <li>
+        <label for="decimal">Número decimal:</label><br>
+        <input type="number" id="decimal" name="decimal" step="0.01"><br><br>
+        </li>
+        <li>
+        <label for="url">URL (validación por requerido, escribir http://):</label><br>
+        <input type="url" id="url" name="url" required placeholder="http://"><br><br>
+        </li>
+        <li>
+        <label for="pattern1">Pattern de validación:</label><br>
+        <input type="text" id="pattern1" name="pattern1" pattern="[A-Za-z]{3,}" title="3 letras y dos números que sean 1 o 2 solamente"><br><br>
+        </li>
+        <li>
+        <label for="pattern2">Pattern de validación:</label><br>
+        <input type="text" id="pattern2" name="pattern2" required placeholder="(+54) 11 XXXXXXXX"><br><br>
+        </li>
+        <li>
+        <input type="submit" value="Enviar" href="/respuestas.html">
+        <input type="reset" value="Restablecer">
+        </li>
+    </form>
+</body>
+</html>

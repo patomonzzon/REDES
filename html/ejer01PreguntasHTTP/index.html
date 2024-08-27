@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PROGRAMACION EN AMBIENTE DE REDES</title>
+</head>
+<body>
+    <article>
+    <header>
+        <h1>Preguntas y referencias sobre protocolos HTTP.</h1>
+    </header>
+    </article>
+    <hr />
+    <section>
+    <h2>Seccion de referencias de interes.</h2>
+    <h4>Abrir enlaces en nuevas pestañas</h4>
+    <nav>
+        <ul>
+            <li><a href="https://www.webempresa.com/blog/http-que-es-y-como-funciona.html" target="_blank">Webempresa</a></li>
+            <li><a href="https://loscreativos.co/marketing-digital/que-es-http-definicion-caracteristicas/" target="_blank" >Los creativos</a></li>
+        </ul>
+    </nav>
+    </section>
+    <hr />
+    <section>
+    <h2>Seccion de Preguntas sobre HTTP</h2>
+    <hr />
+    <ul>
+        <li> 
+            <p>Plantear un caso de uso de encriptación unidireccional</p>
+            <p>Se plantearon dos casos:
+                <ul>
+                    <li>Un documento puede ser enviado por un medio de comunicación y su hash calculado por otro medio de comunicación diferente. En el destino se calcula nuevamente el hash del documento recibido y se lo compara con el hash transferido por el otro medio. Si coinciden queda garantizada la autenticidad del documento.</li>
+                    <li>Una contraseña de usuario que inicia una sesión con una aplicación es transformada en su hash al llegar. Este hash es comparado con otro almacenado en disco del lado del servicio. Si la contraseña encriptada coincide con el hash almacenado se estaría autenticando al mismo</li>
+                </ul>
+            </p>
+        </li>
+        <li>
+            <p>¿Cuáles son las ventajas y las desventajas de la encriptación simétrica?</p>
+            <p>La encriptación simétrica es rápida y eficiente, ideal para encriptar grandes volúmenes de datos y en aplicaciones en tiempo real, además de ser más simple de implementar y consumir menos recursos. Sin embargo, presenta desafíos significativos en la gestión y distribución segura de claves, siendo compleja en entornos grandes y escalables. La seguridad del sistema depende completamente de la protección de la clave, y si esta es comprometida, todos los datos encriptados con ella estarán en riesgo. Además, no proporciona autenticación, por lo que se necesita un mecanismo adicional para garantizar la legitimidad de los mensajes.</p>
+        </li>
+        <li>
+            <p>¿Como encriptaríamos para obtener confidencialidad en la transferencia de datos?</p>
+            <p>Utilizariamos la criptografía bidireccional asimétrica. Se basa en la encriptación de un mensaje con una clave y la des-encriptación con otra diferente. Una de dichas claves (cualquiera de ellas debe ser privada y la otra pública). Si se encripta con la clave pública del receptor para que este a su vez desencripte con su privada se logra confidencialidad.</p>
+        </li>
+        <li>
+            <p>¿Como encriptaríamos para autenticar un documento usando firma electrónica?</p>
+            <p>Hash encriptado con clave RSA privada del emisor: Usando esta firma se garantiza autenticidad del documento. La firma es el producto encriptado asimétricamente con privada del origen del hash md5 del documento (no de todo el documento). Cualquier software de firma electrónica tiene previamente definidos y disponibles la Clave privada (.key) y la clave pública firmada por CA (.cert) Si en el medio alguien extrae el documento y lo modifica, jamas va a poder generar una una firma compatible con la firma original ya que no dispone de la key privada original.</p>
+        </li>
+        <li>
+            <p>¿Que tipo de encriptación se usa en la WEB?</p>
+            <p>HTTPS (Hypertext Transfer Protocol Secure): Es la versión segura de HTTP, utilizando TLS/SSL para encriptar el tráfico web. HTTPS asegura que la información transmitida entre el navegador y el servidor esté cifrada.</p>
+        </li>
+    </ul>
+    </section>
+    <hr />
+    <section>
+    <h2>Seccion de imagenes representativas del protocolo</h2>
+    <p>En esta seccion mostraremos imagenes representativas del protocolo HTTP</p>
+    <img src="HTTP LOGO.jpg" alt="Imagen sobre el logo HTTP" style="width: 420px;"> 
+    <br />
+    <img src="HTTP.png" alt="Imagen sobre el protocolo HTTP" style="width: 400px;">
+    </section>
+    <hr />
+    <section>
+    <h2>Seccion de videos representativos del protocolo</h2>
+    <video width="480px" controls> 
+        <source src="videoProtocoloHTTP.mp4" type="video/mp4">
+    </video>
+    </section>
+    <hr />
+    <footer>
+        <h1>Datos del alumno</h1>
+        <address>
+            Patricio Monzon <br />
+            <a href="mailto:patricio.monzon@comunidad.ub.edu.ar" target="_blank"> <br />
+                patricio.monzon@comunidad.ub.edu.ar    
+            </a>
+        </address>
+    </footer>
+</body>
+</html>
